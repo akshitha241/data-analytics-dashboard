@@ -1,3 +1,4 @@
+import DataTable from "../components/DataTable";
 import ProfitChart from "../components/ProfitChart";
 import CategoryChart from "../components/CategoryChart";
 import RegionChart from "../components/RegionChart";
@@ -30,6 +31,7 @@ function Dashboard() {
             <RegionChart />
         </div>
         <ProfitChart />
+        <DataTable />
       </div>
     </div>
   );
