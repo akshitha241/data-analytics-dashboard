@@ -11,7 +11,6 @@ https://data-analytics-dashboard-psi.vercel.app/
 The Data Analytics Dashboard is an interactive Business Intelligence dashboard built using React.js and Vite. It allows users to upload CSV files, analyze data through dynamic KPI cards, interactive charts, filtering options, and export reports in CSV and PDF formats.
 
 ---
-
 ## ✨ Features
 
 ✅ CSV File Upload
