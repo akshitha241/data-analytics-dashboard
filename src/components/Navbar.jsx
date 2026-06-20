@@ -19,7 +19,7 @@ function Navbar() {
             color: "#1e3a8a",
           }}
         >
-          📊 Business Intelligence Dashboard
+          📊 Interactive Data Analytics Dashboard!
         </h2>
 
         <p
@@ -41,7 +41,6 @@ function Navbar() {
           fontWeight: "bold",
         }}
       >
-        React + Chart.js
       </div>
     </div>
   );
