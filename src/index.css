@@ -2,9 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #eef2f7;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef3f8;
+  color: #1e293b;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+input,
+select {
+  outline: none;
+}
+
+table th,
+table td {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 }

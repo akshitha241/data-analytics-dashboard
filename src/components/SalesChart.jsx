@@ -1,14 +1,13 @@
+import sampleData from "../data/sampleData";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend,
 } from "chart.js";
-
 import { Line } from "react-chartjs-2";
 
 ChartJS.register(
@@ -16,39 +15,46 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend
 );
 
-function SalesChart() {
-  const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+function SalesChart({ uploadedData }) {
+  const data = uploadedData.length ? uploadedData : sampleData;
 
-    datasets: [
-      {
-        label: "Sales",
-        data: [12000, 15000, 9000, 17000, 14000, 11000],
-        borderColor: "blue",
-        backgroundColor: "rgba(0,0,255,0.2)",
-        tension: 0.4,
-      },
-    ],
-  };
+  const sales = {};
+
+  data.forEach((item) => {
+    sales[item.month] = (sales[item.month] || 0) + Number(item.sales);
+  });
 
   return (
     <div
       style={{
-        marginTop: "20px",
         background: "white",
         padding: "20px",
         borderRadius: "15px",
-        boxShadow: "0 4px 12pxrgba(0,0,0,0.08)",
+        boxShadow: "0 4px 12px rgba(0,0,0,.08)",
+        marginTop: "20px",
       }}
     >
-      <h2>Monthly Sales Trend</h2>
+      <h3>📈 Monthly Sales Trend</h3>
 
-      <Line data={data} />
+      <Line
+        data={{
+          labels: Object.keys(sales),
+          datasets: [
+            {
+              label: "Sales",
+              data: Object.values(sales),
+              borderColor: "#2563eb",
+              backgroundColor: "rgba(37,99,235,.2)",
+              fill: true,
+              tension: 0.4,
+            },
+          ],
+        }}
+      />
     </div>
   );
 }

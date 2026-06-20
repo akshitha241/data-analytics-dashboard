@@ -1,10 +1,10 @@
+import sampleData from "../data/sampleData";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend,
 } from "chart.js";
@@ -16,25 +16,19 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend
 );
 
-function ProfitChart() {
-  const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+function ProfitChart({ uploadedData }) {
+  const data = uploadedData.length ? uploadedData : sampleData;
 
-    datasets: [
-      {
-        label: "Profit",
-        data: [2500, 3200, 1800, 4200, 3100, 2200],
-        borderColor: "#10B981",
-        backgroundColor: "rgba(16,185,129,0.2)",
-        tension: 0.4,
-      },
-    ],
-  };
+  const profit = {};
+
+  data.forEach((item) => {
+    profit[item.month] =
+      (profit[item.month] || 0) + Number(item.profit);
+  });
 
   return (
     <div
@@ -42,13 +36,27 @@ function ProfitChart() {
         background: "white",
         padding: "20px",
         borderRadius: "15px",
-        boxShadow: "0 4px 12pxrgba(0,0,0,0.08)",
+        boxShadow: "0 4px 12px rgba(0,0,0,.08)",
         marginTop: "20px",
       }}
     >
-      <h3>Monthly Profit Trend</h3>
+      <h3>💰 Monthly Profit Trend</h3>
 
-      <Line data={data} />
+      <Line
+        data={{
+          labels: Object.keys(profit),
+          datasets: [
+            {
+              label: "Profit",
+              data: Object.values(profit),
+              borderColor: "#10b981",
+              backgroundColor: "rgba(16,185,129,.2)",
+              fill: true,
+              tension: 0.4,
+            },
+          ],
+        }}
+      />
     </div>
   );
 }
