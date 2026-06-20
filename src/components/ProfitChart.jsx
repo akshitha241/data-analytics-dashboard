@@ -41,7 +41,8 @@ function ProfitChart() {
       style={{
         background: "white",
         padding: "20px",
-        borderRadius: "10px",
+        borderRadius: "15px",
+        boxShadow: "0 4px 12pxrgba(0,0,0,0.08)",
         marginTop: "20px",
       }}
     >

@@ -39,10 +39,11 @@ function SalesChart() {
   return (
     <div
       style={{
-        marginTop: "30px",
+        marginTop: "20px",
         background: "white",
         padding: "20px",
-        borderRadius: "10px",
+        borderRadius: "15px",
+        boxShadow: "0 4px 12pxrgba(0,0,0,0.08)",
       }}
     >
       <h2>Monthly Sales Trend</h2>

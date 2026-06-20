@@ -2,7 +2,7 @@ function Sidebar() {
   return (
     <div
       style={{
-        width: "240px",
+        width: "220px",
         height: "100vh",
         background: "#1e3a8a",
         color: "white",
