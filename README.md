@@ -1,16 +1,102 @@
-# React + Vite
+# 📊 Data Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Live Demo
 
-Currently, two official plugins are available:
+https://data-analytics-dashboard-psi.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The Data Analytics Dashboard is an interactive Business Intelligence dashboard built using React.js and Vite. It allows users to upload CSV files, analyze data through dynamic KPI cards, interactive charts, filtering options, and export reports in CSV and PDF formats.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+✅ CSV File Upload
+
+✅ Dynamic KPI Cards
+
+✅ Monthly Sales Trend Analysis
+
+✅ Category-wise Analysis
+
+✅ Region-wise Analysis
+
+✅ Profit Analysis
+
+✅ Interactive Filters
+
+✅ Export Data as CSV
+
+✅ Export Reports as PDF
+
+✅ Responsive Dashboard Design
+
+✅ Sidebar Navigation
+
+---
+
+## 🛠️ Technologies Used
+
+- React.js
+- Vite
+- JavaScript
+- Chart.js
+- React ChartJS 2
+- PapaParse
+- jsPDF
+- jsPDF AutoTable
+- HTML5
+- CSS3
+
+---
+
+## 📊 Dashboard Modules
+
+### KPI Cards
+- Total Sales
+- Total Profit
+- Orders
+- Categories
+
+### Charts
+- Monthly Sales Trend
+- Category Analysis
+- Region Analysis
+- Profit Analysis
+
+### Data Management
+- CSV Upload
+- Dynamic Filtering
+- Export CSV
+- Export PDF
+
+---
+
+## 🌐 Live Website
+
+https://data-analytics-dashboard-psi.vercel.app/
+
+---
+
+## 📂 GitHub Repository
+
+https://github.com/akshitha241/data-analytics-dashboard
+
+---
+
+## 👩‍💻 Author
+
+**Akshitha Reddy Kallem**
+
+B.Tech CSE
+
+Sreenidhi Institute of Science & Technology (SNIST)
+
+---
+
+## 📸 Screenshots
+
+(Add dashboard screenshots here)
